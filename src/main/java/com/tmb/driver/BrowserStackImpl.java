@@ -16,8 +16,8 @@ public class BrowserStackImpl implements IDriver{
     public WebDriver getDriver(Map<String,String> map) throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         map.forEach(capabilities::setCapability);//it reads all the key value from map and store it in capabilities
-        capabilities.setCapability("browserstack.user", "amuthansakthivel1");
-        capabilities.setCapability("browserstack.key", "xET1z5tchDwDZ4Anwepa");
+        capabilities.setCapability("browserstack.user", "dummy"); //update your user
+        capabilities.setCapability("browserstack.key", "dummy2"); //update your key
         capabilities.setCapability("project", "Test Java Project");
         capabilities.setCapability("build", "Java Android demo");
         capabilities.setCapability("name", "some name");
