@@ -3,10 +3,11 @@ package com.tmb.driver;
 import org.openqa.selenium.WebDriver;
 
 import java.net.MalformedURLException;
+import java.util.Map;
 
 public class PcloudyImpl implements IDriver{
     @Override
-    public WebDriver getDriver() throws MalformedURLException {
+    public WebDriver getDriver(Map<String,String> map) throws MalformedURLException {
         //code
         return null;
     }

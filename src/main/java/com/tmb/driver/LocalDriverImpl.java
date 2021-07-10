@@ -1,6 +1,5 @@
 package com.tmb.driver;
 
-import com.tmb.constants.FrameworkConstants;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
@@ -10,15 +9,15 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Map;
 
-import static com.tmb.constants.FrameworkConstants.*;
+import static com.tmb.constants.FrameworkConstants.getApkFilePath;
 
 public class LocalDriverImpl implements  IDriver{
     @Override
-    public WebDriver getDriver() throws MalformedURLException {
+    public WebDriver getDriver(Map<String,String> map) throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.APP, getApkFilePath()
-                );
+        capabilities.setCapability(MobileCapabilityType.APP, getApkFilePath());
         capabilities.setCapability(AndroidMobileCapabilityType.SYSTEM_PORT, "8200");
         capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "io.appium.android.apis");
         capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".ApiDemos");
