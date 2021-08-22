@@ -53,7 +53,7 @@ public class TapTests  extends BaseTest{ //Test
         HashMap<String,String> hashMap = new ObjectMapper().readValue(new File(System.getProperty("user.dir") +
                 "/src/test/resources/jsontestdata/iteration1.json"), HashMap.class);
         HashMap<String,String> hashMap2 = new ObjectMapper().readValue(new File(System.getProperty("user.dir") +
-                "/src/test/resources/jsontestdata/iteration1.json"), HashMap.class);
+                "/src/test/resources/jsontestdata/iteration2.json"), HashMap.class);
         //list<Map<String,String>>  list.toArray
         return new Object[]{hashMap,hashMap2};
     }

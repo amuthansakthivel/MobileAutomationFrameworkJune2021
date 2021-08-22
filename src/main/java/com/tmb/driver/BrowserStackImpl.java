@@ -16,13 +16,13 @@ public class BrowserStackImpl implements IDriver{
     public WebDriver getDriver(Map<String,String> map) throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         map.forEach(capabilities::setCapability);//it reads all the key value from map and store it in capabilities
-        capabilities.setCapability("browserstack.user", "dummy"); //update your user
-        capabilities.setCapability("browserstack.key", "dummy2"); //update your key
+        capabilities.setCapability("browserstack.user", "amuthansakthivel1"); //update your user
+        capabilities.setCapability("browserstack.key", "xET1z5tchDwDZ4Anwepa"); //update your key
         capabilities.setCapability("project", "Test Java Project");
         capabilities.setCapability("build", "Java Android demo");
         capabilities.setCapability("name", "some name");
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"uiautomator2");
-        capabilities.setCapability(MobileCapabilityType.APP, "bs://beca9cb73eec88c758c0aeefaf512165fca3599e" );
+        capabilities.setCapability(MobileCapabilityType.APP, "bs://b38557fcfe3048b6b46e26dc35ddb4f3c870832f" );
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
         capabilities.asMap().forEach((k,v)-> System.out.println(k+":"+v));
         return new AndroidDriver<AndroidElement>(new URL("http://hub.browserstack.com/wd/hub"),capabilities);
